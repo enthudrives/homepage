@@ -1,7 +1,7 @@
 # Site settings
 name: Suganthi
 description: "About travel, fitness, coding and other joys of life."
-url: "/homepage"
+baseurl: "/homepage"
 
 
 # Delete the lines you don't need
