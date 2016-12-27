@@ -1,0 +1,33 @@
+# Site settings
+name: Suganthi
+description: "About travel, fitness, coding and other joys of life."
+url: ""
+
+
+# Delete the lines you don't need
+# about 5 elements are recomended
+github_username:  enthudrives
+facebook_username: t.suganthi
+twitter_username: enthudrives
+linkedin_username: enthudrives
+instagram_username:  sugart3a
+soundcloud_username:  suganthi-krishnavathi
+email: suganthikrishnavathi@gmail.com
+avatar: yes
+avatar_img_path: "imgs/suga.jpg"
+# avatar_img_path: "https://avatars3.githubusercontent.com/u/640748"
+
+
+front_img: yes
+front_img_path: "imgs/opera_house.jpg"
+#front_img_path: "https://external.url/image.jpg"
+
+
+favicon_img: yes
+favicon_img_path: "imgs/favicon.ico"
+#favicon_img_path: "https://external.url/favicon.ico"
+
+
+# Build settings
+markdown: kramdown
+permalink: pretty

@@ -1,0 +1,42 @@
+<p>Spring lets you autowire all components implementing the interface.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@Component
+public interface Animal {
+   void talk();
+}
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>public class Cat implements Animal {
+  void talk() {
+    System.out.println("Meow");
+  }
+}
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class Dog implements Animal {
+  void talk() {
+    System.out.println("Bow wow");
+  }
+}
+</code></pre>
+</div>
+
+<p>If you want to inject all implementations of <code class="highlighter-rouge">Animal</code> interface in some service, you can just inject a list of type Animal.</p>
+
+<pre><code class="language-@Autowired">private List animals;
+</code></pre>
+
+<p>The field <code class="highlighter-rouge">animals</code> is a list of all components implementing the <code class="highlighter-rouge">Animal</code> interface. Now if you want to invoke <code>talk()</code> method on Dog, Cat and other implementations of the <code>Animal</code> interface, you can do the following.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class SomeService {
+  @Autowired
+  private List animals;
+
+  void someMethod() {
+    animals.forEach(Animal::talk())
+  }
+}
+</code></pre>
+</div>
